@@ -33,7 +33,7 @@ body{
     font-family: 'Roboto', sans-serif;
     overflow: visible;
     animation: fade-in;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 .numexercise-box, .bodyparts-box, .height-box, .weight-box, .skill-box{
@@ -82,6 +82,9 @@ body{
     background: #06283d;
     color: #ffffff;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
 }
 
 .submit-button:hover{
@@ -110,7 +113,7 @@ body{
     background-color: #ffffff;
     padding: .75rem;
     border-radius: .25rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
     opacity: 0%;
     font-family: 'Roboto', sans-serif;
 }
@@ -151,8 +154,3 @@ body{
 .bottom-banner a:visited{
     color: #001d30;
 }
-
-
-
-
-
