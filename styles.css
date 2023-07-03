@@ -4,36 +4,261 @@
     border-top: #ffffff;
     border-left: #ffffff;
     border-right: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 body{
+    position: relative;
     height: 100vh;
-    display: flex;
+    width: 100vw;
+    top: 0;
+    left: 0;
     align-items: center;
+    display: flex;
     justify-content: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom right, #004067, #001d30);
+    background: linear-gradient(253deg, #22c79e, #1797d2, #9460e8);
+    background-size: 300% 300%;
+    -webkit-animation: Background 25s ease infinite;
+    -moz-animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite;
+}
+    
+br {
+    display: block; 
+    content: ""; 
+    margin-top: 2px; 
 }
 
+@-webkit-keyframes Background {
+    0% {
+        background-position: 0% 50%
+    }
+    33% {
+        background-position: 66% 33%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    66% {
+        background-position: 33% 66%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Background {
+    0% {
+        background-position: 0% 50%
+    }
+    33% {
+        background-position: 66% 33%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    66% {
+        background-position: 33% 66%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Background {
+    0% {
+        background-position: 0% 50%
+    }
+    33% {
+        background-position: 66% 33%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    66% {
+        background-position: 33% 66%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+  }
+
+@-webkit-keyframes fade-in{
+    0% {
+        opacity: 0%;
+        visibility: visible;
+    }
+    99% {
+        opacity: 99%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@-moz-keyframes fade-in{
+    0% {
+        opacity: 0%;
+        visibility: visible;
+    }
+    99% {
+        opacity: 99%;
+    }
+    100% {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
 @keyframes fade-in{
-    from{opacity: 0%;}
-    to{opacity: 100%;}
+    0% {
+        opacity: 0%;
+        visibility: visible;
+    }
+    99% {
+        opacity: 99%;
+    }
+    100% {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@-webkit-keyframes fade-out{
+    0% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 1%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+        visibility: visible;
+    }
+}
+@-moz-keyframes fade-out{
+    0% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 1%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+@keyframes fade-out{
+    0% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 1%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+.fadeoutanim{
+    -webkit-animation: .3s ease-out forwards fade-out;
+    -moz-animation: fade-out .3s ease-out forwards;
+    animation: fade-out .3s ease-out forwards;
+}
+
+.fadeinanim{
+    -webkit-animation: .3s ease-in .5s forwards fade-in;
+    -moz-animation: .3s ease-in .5s forwards fade-in;
+    animation: .3s ease-in .5s forwards fade-in;
+}
+
+.frosted-glass{ 
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(255, 255, 255, 0.15);   
+    backdrop-filter: blur(5px);
+}
+
+.front-page{
+    position: relative;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100vw;    
+    height: 300px;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, .5);
+}
+
+.welcome-text{
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 80px;
+    height: 300px;
+    width: 1200px;
+    font-size: 100px;
+    font-family: 'Raleway', sans-serif; 
+    text-shadow: 3px 3px 3px rgba(196, 196, 196, 0.327);
+}
+
+.enter-box{
+    position: absolute;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    margin-left: 1200px;
+    padding-top: 95px;
+}
+
+.enter-button{
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    width: 200px;
+    height: 90px;
+    background: linear-gradient(253deg, #22c79e, #1797d2, #9460e8);
+    background-size: 300% 300%;
+    -webkit-animation: Background 25s ease infinite;
+    -moz-animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+
+    transition: transform 0.3s ease 0s;
+}
+
+.enter-button:hover{
+    background: #ffffff;
+    color: black;
+    transform: scale(1.05);
 }
 
 .container{
-    margin: 0;
-    position: relative;
+    position: absolute;
+    z-index: 3;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+    margin-bottom: 20px;
+    align-content: center;
     width: 700px;
     height: 600px;
     padding: 0px 32px;
     border-radius: 10px;
     background: #ffffff;
     overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif; 
     overflow: visible;
-    animation: fade-in;
-    animation-duration: 2s;
+    visibility: hidden;
+    opacity: 0%;
 }
 
 .numexercise-box, .bodyparts-box, .height-box, .weight-box, .skill-box{
@@ -53,12 +278,14 @@ body{
     font-size: 20px;
     font-weight: 500;
     overflow: scroll;
+    font-family: 'Rubik', sans-serif;
 }
 
 .numexercise-box::placeholder, .bodyparts-box::placeholder, .height-box::placeholder, .weight-box::placeholder, .skill-box::placeholder{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     color: #06283d;
+    font-family: 'Rubik', sans-serif;
 }
 
 .submit-box{
@@ -76,19 +303,27 @@ body{
 
 .submit-button{
     font-size: 22px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     width: 200px;
     height: 70px;
-    background: #06283d;
+    background: linear-gradient(253deg, #22c79e, #1797d2, #9460e8);
+    background-size: 300% 300%;
+    -webkit-animation: Background 25s ease infinite;
+    -moz-animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite;
     color: #ffffff;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+
+    transition: transform 0.3s ease 0s;
 }
 
 .submit-button:hover{
-    background: #002338;
+    background: #ffffff;
+    color: black;
+    transform: scale(1.05);
 }
 
 .help-info{
@@ -125,19 +360,27 @@ body{
 }
 
 .bottom-banner{
+    position: absolute;
+    z-index: 2;
     top: 950px;
     margin: auto;
     padding: 6px 0px;
-    position: absolute;
     background: #eee7e7;
-    width: 100%;
-    height: 120px;
+    width: 100vw;
+    height: 100px;
     text-align: center;
 }
 
-.bottom-banner span{
+#devmsg{
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
+    font-weight: 500;
+    color:#001d30;
+}
+
+#email{
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
     font-weight: 500;
     color:#001d30;
 }
