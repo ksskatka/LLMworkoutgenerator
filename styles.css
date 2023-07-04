@@ -230,7 +230,7 @@ br {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
 
     transition: transform 0.3s ease 0s;
 }
@@ -254,6 +254,7 @@ br {
     padding: 0px 32px;
     border-radius: 10px;
     background: #ffffff;
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, .5);
     overflow: hidden;
     font-family: 'Raleway', sans-serif; 
     overflow: visible;
@@ -328,7 +329,7 @@ br {
 
 .help-info{
     position: relative;
-    left: 425px;
+    left: 435px;
     top: 68px;
 }
 
