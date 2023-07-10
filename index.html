@@ -14,13 +14,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/a0c9adc2b9.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     </head>
 
     <body>
-
-        <div class="frosted-glass">
-
-        </div>
+        <div class="frosted-glass"></div>
         
         <div id="front" class="front-page">
             <div class="welcome-text">
@@ -34,34 +32,41 @@
 
         <div id="inputmenu" class="container">
 
-            <div class="numexercise-box">
-                <input type="text" placeholder="Number of Exercises?">
-            </div>
+            <form class="iform" id="iform" method="get" action="/">
+                <div class="numexercise-box" id="numexercise-box">
+                    <input type="text" placeholder="Number of Exercises?" id="input1" name="input1" required>
+                    <div class="errorclass" id="error1">Please enter a valid input</div>
+                </div>
 
-            <div class="bodyparts-box">
-                <input type="text" placeholder="What body parts? (separate using ', ')">
-            </div>
+                <div class="bodyparts-box" id="bodyparts-box">
+                    <input type="text" placeholder="What body parts? (separate using ', ')" id="input2" name="input2">
+                    <div class="errorclass" id="error2">Please enter a valid input</div>
+                </div>
 
-            <div class="height-box">
-                <input type="text" placeholder="Height?">
-            </div>
+                <div class="height-box" id="height-box">
+                    <input type="text" placeholder="Height?" id="input3" name="input3">
+                    <div class="errorclass" id="error3">Please enter a valid input</div>
+                </div>
 
-            <div class="weight-box">
-                <input type="text" placeholder="Weight?">
-            </div>
+                <div class="weight-box" id="weight-box">
+                    <input type="text" placeholder="Weight?" id="input4" name="input4">
+                    <div class="errorclass" id="error4">Please enter a valid input</div>
+                </div>
 
-            <div class="skill-box">
-                <input type="text" placeholder="Are you a beginner, intermediate or advanced?">
-            </div>
+                <div class="skill-box" id="skill-box">
+                    <input type="text" placeholder="Are you a beginner, intermediate or advanced?" id="input5" name="input5">
+                    <div class="errorclass" id="error5">Please enter a valid input</div> 
+                </div>
 
-            <div class="submit-box">
-                <button class="submit-button">GENERATE</button>
-            </div>
+                <div class="submit-box">
+                    <button type="submit" onclick="submitClick()" class="submit-button">GENERATE</button>
+                </div>
+            </form>
 
             <div class="help-info">
                 <button class="fa-solid fa-circle-question"></button>
                 <div class="info">
-                    <span>This is a service that uses the power of AI to create a tailored workout plan for you! Simply input the info, click submit, and get those gains!</span>
+                    <span>This is a service that uses the power of AI to create a tailored workout plan for you! Simply input the info, click submit, and view your workout plan!</span>
                 </div>
             </div>
 
@@ -74,7 +79,7 @@
                 <a href="https://github.com/arrrshia">https://github.com/arrrshia</a><span id="email"> | andrewalmasi@gmail.com</span>
             </div>
         </div>
-
+        
         <script src="scripts.js" async defer></script>
 
     </body>
