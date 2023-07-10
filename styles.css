@@ -31,6 +31,7 @@ br {
     content: ""; 
     margin-top: 2px; 
 }
+  
 
 @-webkit-keyframes Background {
     0% {
@@ -163,16 +164,85 @@ br {
     }
 }
 
+@-webkit-keyframes error-fade-in{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@-moz-keyframes error-fade-in{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes error-fade-in{
+    from {
+            opacity: 0%;
+    }
+    to {
+            opacity: 100%;
+    }
+}
+
+@-webkit-keyframes pop-out{
+    50% {
+        transform: scale(1.08);
+        font-weight: 500;
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@-moz-keyframes pop-out{
+    50% {
+        transform: scale(1.08);
+        font-weight: 500;
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes pop-out{
+    50% {
+        transform: scale(1.08);
+        font-weight: 500;
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
 .fadeoutanim{
     -webkit-animation: .3s ease-out forwards fade-out;
-    -moz-animation: fade-out .3s ease-out forwards;
-    animation: fade-out .3s ease-out forwards;
+    -moz-animation: .3s ease-out forwards fade-out ;
+    animation: .3s ease-out forwards fade-out ;
 }
 
 .fadeinanim{
     -webkit-animation: .3s ease-in .5s forwards fade-in;
     -moz-animation: .3s ease-in .5s forwards fade-in;
     animation: .3s ease-in .5s forwards fade-in;
+}
+
+.errorfadeinanim{
+    -webkit-animation: .4s linear forwards error-fade-in ;
+    -moz-animation: .4s linear forwards error-fade-in ;
+    animation: .4s linear forwards error-fade-in;
+}
+
+.popoutanim{
+    -webkit-animation: .3s ease-in-out backwards pop-out;
+    -moz-animation: .3s ease-in-out backwards pop-out;
+    animation: .3s ease-in-out backwards pop-out;
 }
 
 .frosted-glass{ 
@@ -227,10 +297,10 @@ br {
     -moz-animation: Background 25s ease infinite;
     animation: Background 25s ease infinite;
     color: #ffffff;
-    cursor: pointer;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
 
     transition: transform 0.3s ease 0s;
 }
@@ -251,7 +321,7 @@ br {
     align-content: center;
     width: 700px;
     height: 600px;
-    padding: 0px 32px;
+    padding: 0px 10px;
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, .5);
@@ -263,6 +333,7 @@ br {
 }
 
 .numexercise-box, .bodyparts-box, .height-box, .weight-box, .skill-box{
+    position: relative;
     width: 100%;
     height: min-content;
     display: flex;
@@ -272,7 +343,19 @@ br {
     margin-bottom: 15px;
 }
 
+.errorclass{
+    visibility: hidden;
+    position: absolute;
+    left:85px;
+    top:30px;
+    font-family: 'Raleway', sans-serif; 
+    color: red;
+    font-size: 14px;
+    opacity: 100%;
+}
+
 .numexercise-box input, .bodyparts-box input, .height-box input, .weight-box input, .skill-box input{
+    position: relative;
     margin: 0;
     color:#06283d;
     width: 75%;
@@ -283,6 +366,7 @@ br {
 }
 
 .numexercise-box::placeholder, .bodyparts-box::placeholder, .height-box::placeholder, .weight-box::placeholder, .skill-box::placeholder{
+    width: 75%;
     font-size: 20px;
     font-weight: 600;
     color: #06283d;
@@ -313,10 +397,10 @@ br {
     -moz-animation: Background 25s ease infinite;
     animation: Background 25s ease infinite;
     color: #ffffff;
-    cursor: pointer;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
 
     transition: transform 0.3s ease 0s;
 }
@@ -329,7 +413,7 @@ br {
 
 .help-info{
     position: relative;
-    left: 435px;
+    left: 457px;
     top: 68px;
 }
 
