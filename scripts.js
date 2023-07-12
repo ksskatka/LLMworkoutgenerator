@@ -1,23 +1,24 @@
-function enterClick(){
+let enterbtn = document.querySelector("#enter-button");
+let submitbtn = document.querySelector("#submit-button");
+
+enterbtn.addEventListener("click", function() {
     document.getElementById('front').classList.add('fadeoutanim'); 
     document.getElementById('inputmenu').classList.add('fadeinanim');
-}
+})
 
-/*
+submitbtn.addEventListener("click", function() {
+    /*
     WILL TIDY UP AND SHORTEN THE CODE BELOW, JUST FOR QUICK AND VISIBLE TWEAKING.
-*/
-
-function submitClick(){
-    event.preventDefault();
-    var information = {
+    */ 
+    let information = {
         a : document.getElementsByName("input1")[0].value,
         b : document.getElementsByName("input2")[0].value,
         c : document.getElementsByName("input3")[0].value,
         d : document.getElementsByName("input4")[0].value,
         e : document.getElementsByName("input5")[0].value,
     };
-
-    var validcheck = true;
+    
+    let validcheck = true;
     if (information.a == "" || information.a == null) {
         document.getElementById('error1').style.visibility="visible";
         document.getElementById('error1').style.animation = 'none';
@@ -36,7 +37,7 @@ function submitClick(){
         document.getElementById('error1').classList.remove('errorfadeinanim');
         document.getElementById('error1').classList.remove('popoutanim');
     }
-
+    
     if (information.b == "" || information.b == null) {
         document.getElementById('error2').style.visibility="visible";
         document.getElementById('error2').style.visibility="visible";
@@ -56,7 +57,7 @@ function submitClick(){
         document.getElementById('error2').classList.remove('errorfadeinanim');
         document.getElementById('error2').classList.remove('popoutanim');
     }
-
+    
     if (information.c == "" || information.c == null) {
         document.getElementById('error3').style.visibility="visible";
         document.getElementById('error3').style.visibility="visible";
@@ -76,7 +77,7 @@ function submitClick(){
         document.getElementById('error3').classList.remove('errorfadeinanim');
         document.getElementById('error3').classList.remove('popoutanim');
     }
-
+    
     if (information.d == "" || information.d == null) {
         document.getElementById('error4').style.visibility="visible";
         document.getElementById('error4').style.visibility="visible";
@@ -96,7 +97,7 @@ function submitClick(){
         document.getElementById('error4').classList.remove('errorfadeinanim');
         document.getElementById('error4').classList.remove('popoutanim');
     }
-
+    
     if (information.e == "" || information.e == null) {
         document.getElementById('error5').style.visibility="visible";
         document.getElementById('error5').style.visibility="visible";
@@ -116,7 +117,7 @@ function submitClick(){
         document.getElementById('error5').classList.remove('errorfadeinanim');
         document.getElementById('error5').classList.remove('popoutanim');
     }
-
+    
     if (validcheck == true) {
         console.log(information.a);
         console.log(information.b);
@@ -124,5 +125,4 @@ function submitClick(){
         console.log(information.d);
         console.log(information.e);
     }
-}
-
+})

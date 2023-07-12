@@ -26,40 +26,40 @@
             </div>
 
             <div class="enter-box">
-                <button onclick="enterClick()" class="enter-button">ENTER</button>
+                <button type="button" class="enter-button" id="enter-button">ENTER</button>
             </div>
         </div>
 
         <div id="inputmenu" class="container">
 
-            <form class="iform" id="iform" method="get" action="/">
+            <form class="iform" id="iform">
                 <div class="numexercise-box" id="numexercise-box">
                     <input type="text" placeholder="Number of Exercises?" id="input1" name="input1" required>
                     <div class="errorclass" id="error1">Please enter a valid input</div>
                 </div>
 
                 <div class="bodyparts-box" id="bodyparts-box">
-                    <input type="text" placeholder="What body parts? (separate using ', ')" id="input2" name="input2">
+                    <input type="text" placeholder="What body parts? (separate using ', ')" id="input2" name="input2" required>
                     <div class="errorclass" id="error2">Please enter a valid input</div>
                 </div>
 
                 <div class="height-box" id="height-box">
-                    <input type="text" placeholder="Height?" id="input3" name="input3">
+                    <input type="text" placeholder="Height?" id="input3" name="input3" required>
                     <div class="errorclass" id="error3">Please enter a valid input</div>
                 </div>
 
                 <div class="weight-box" id="weight-box">
-                    <input type="text" placeholder="Weight?" id="input4" name="input4">
+                    <input type="text" placeholder="Weight?" id="input4" name="input4" required>
                     <div class="errorclass" id="error4">Please enter a valid input</div>
                 </div>
 
                 <div class="skill-box" id="skill-box">
-                    <input type="text" placeholder="Are you a beginner, intermediate or advanced?" id="input5" name="input5">
+                    <input type="text" placeholder="Are you a beginner, intermediate or advanced?" id="input5" name="input5" required>
                     <div class="errorclass" id="error5">Please enter a valid input</div> 
                 </div>
 
                 <div class="submit-box">
-                    <button type="submit" onclick="submitClick()" class="submit-button">GENERATE</button>
+                    <button type="button" class="submit-button" id="submit-button">GENERATE</button>
                 </div>
             </form>
 
