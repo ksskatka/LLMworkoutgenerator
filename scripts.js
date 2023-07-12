@@ -5,7 +5,7 @@ enterbtn.addEventListener("click", function() {
     document.getElementById('front').classList.add('fadeoutanim'); 
     document.getElementById('inputmenu').classList.add('fadeinanim');
 })
-
+ 
 submitbtn.addEventListener("click", function() {
     /*
     WILL TIDY UP AND SHORTEN THE CODE BELOW, JUST FOR QUICK AND VISIBLE TWEAKING.
