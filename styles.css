@@ -136,7 +136,6 @@ br {
     100% {
         opacity: 0%;
         visibility: hidden;
-        visibility: visible;
     }
 }
 @-moz-keyframes fade-out{
@@ -222,15 +221,21 @@ br {
 }
 
 .fadeoutanim{
-    -webkit-animation: .3s ease-out forwards fade-out;
-    -moz-animation: .3s ease-out forwards fade-out ;
-    animation: .3s ease-out forwards fade-out ;
+    -webkit-animation: .3s ease-out 0s forwards fade-out;
+    -moz-animation: .3s ease-out 0s forwards fade-out ;
+    animation: .3s ease-out 0s forwards fade-out ;
 }
 
 .fadeinanim{
     -webkit-animation: .3s ease-in .5s forwards fade-in;
     -moz-animation: .3s ease-in .5s forwards fade-in;
     animation: .3s ease-in .5s forwards fade-in;
+}
+
+.fadeinanimtable{
+    -webkit-animation: .4s ease-in .1s forwards fade-in;
+    -moz-animation: .4s ease-in .1s forwards fade-in;
+    animation: .4s ease-in .1s forwards fade-in;
 }
 
 .errorfadeinanim{
@@ -273,6 +278,7 @@ br {
     height: 300px;
     width: 1200px;
     font-size: 100px;
+    letter-spacing: 2px;
     font-family: 'Raleway', sans-serif; 
     text-shadow: 3px 3px 3px rgba(196, 196, 196, 0.327);
 }
@@ -442,6 +448,55 @@ br {
     animation: fade-in;
     animation-duration: .8s;
     animation-fill-mode: forwards;
+}
+
+.resulttable{
+    visibility: hidden;
+    min-width: 900px;
+    min-height: 650px;
+    z-index: 20;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    padding: 25px;
+    margin: 25px 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .5);
+}
+
+.resulttable th, .resulttable td{
+    padding: 18px 20px;
+}
+
+.resulttable thead{
+    background-color: #001d30;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.resulttable tbody{
+    text-align: center;
+    font-size: 18px;
+}
+
+.resulttable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+  
+.resulttable tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.resulttable td{
+    border-bottom: 1px solid #dddddd;
+}
+
+.resulttable tbody tr:last-of-type{
+    border-bottom: 5px solid ;
 }
 
 .bottom-banner{

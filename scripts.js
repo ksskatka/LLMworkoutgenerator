@@ -124,5 +124,10 @@ submitbtn.addEventListener("click", function() {
         console.log(information.c);
         console.log(information.d);
         console.log(information.e);
+
+        document.getElementById('inputmenu').classList.remove('fadeinanim'); 
+        document.getElementById('inputmenu').style.visibility="visible"; 
+        document.getElementById('inputmenu').classList.add('fadeoutanim'); 
+        document.getElementById('resulttable').classList.add('fadeinanimtable');
     }
 })
