@@ -1,6 +1,6 @@
 let enterbtn = document.querySelector("#enter-button");
 let submitbtn = document.querySelector("#submit-button");
-
+ 
 enterbtn.addEventListener("click", function() {
     document.getElementById('front').classList.add('fadeoutanim'); 
     document.getElementById('inputmenu').classList.add('fadeinanim');

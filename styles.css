@@ -237,7 +237,7 @@ br {
     -moz-animation: .4s ease-in .1s forwards fade-in;
     animation: .4s ease-in .1s forwards fade-in;
 }
-
+ 
 .errorfadeinanim{
     -webkit-animation: .4s linear forwards error-fade-in ;
     -moz-animation: .4s linear forwards error-fade-in ;
