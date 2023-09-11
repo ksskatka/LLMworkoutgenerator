@@ -379,6 +379,41 @@ br {
     font-family: 'Rubik', sans-serif;
 }
 
+.placeholdertext1{
+    z-index: 3;
+    position: absolute;
+    top: 40px;
+    left: 95px;
+}
+
+.placeholdertext2{
+    z-index: 3;
+    position: absolute;
+    top: 127px;
+    left: 95px;
+}
+
+.placeholdertext3{
+    z-index: 3;
+    position: absolute;
+    top: 214px;
+    left: 95px;
+}
+
+.placeholdertext4{
+    z-index: 3;
+    position: absolute;
+    top: 299px;
+    left: 95px;
+}
+
+.placeholdertext5{
+    z-index: 3;
+    position: absolute;
+    top: 385px;
+    left: 95px;
+}
+
 .submit-box{
     position: absolute; 
     left: 0; 
@@ -450,10 +485,82 @@ br {
     animation-fill-mode: forwards;
 }
 
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    visibility: hidden;
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    z-index: 30;
+}
+/* Credit to https://cssloaders.github.io/ for the loader! */
+.loader {
+    z-index: 40;
+    visibility: hidden;
+    color: #ffffff;
+    font-size: 70px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+  }
+
+@keyframes mltShdSpin {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+      -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+       -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+       -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+       -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+       -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+      0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+  
+@keyframes round {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+   
+
 .resulttable{
     visibility: hidden;
-    min-width: 900px;
-    min-height: 650px;
+    min-width: 1000px;
+    min-height: 675px;
     z-index: 20;
     position: absolute;
     border-radius: 5px 5px 0 0;
@@ -476,27 +583,11 @@ br {
     color: #ffffff;
     font-size: 24px;
     letter-spacing: 2px;
-}
-
-.resulttable tbody{
     text-align: center;
-    font-size: 18px;
-}
+}   
 
-.resulttable tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-  
-.resulttable tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
-}
-
-.resulttable td{
-    border-bottom: 1px solid #dddddd;
-}
-
-.resulttable tbody tr:last-of-type{
-    border-bottom: 5px solid ;
+.resulttable tr:last-of-type{
+    border-bottom: #001d30 5px solid;
 }
 
 .bottom-banner{
@@ -505,7 +596,7 @@ br {
     top: 950px;
     margin: auto;
     padding: 6px 0px;
-    background: #eee7e7;
+    background: #ffffff;
     width: 100vw;
     height: 100px;
     text-align: center;
