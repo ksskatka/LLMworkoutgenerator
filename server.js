@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
@@ -17,7 +18,7 @@ app.post('/getGPT3Response', async (req, res) => {
     const promptText = req.body.prompt;
 
     const headers = {
-        'Authorization': `Bearer ${'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'}`,
+        'Authorization': `Bearer ${API_KEY}`,
         'Content-Type': 'application/json',
         'User-Agent': 'OpenAI-GPT-Node.js'
     };
